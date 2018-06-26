@@ -17,7 +17,7 @@ def dec(or_txt,key):
      cipher2= Fernet(key)
      dcr_txt = cipher2.decrypt(or_txt)
      decrypted_text = dcr_txt.decode("utf-8")
-     return decrypted_text
+     return decrypted_text      
 
 def inpu():
     a=input("enter the text")

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
 from myapp import forms
 from myapp import form2
 from myapp import enden
@@ -12,14 +13,19 @@ def form_(request):
     new=0
     en_txt=" " 
     e_key=" "
-
-
-    if request.method=="POST":
-        #new=0                              
+    em=" "
+    if request.method=="POST":                            
         formc=forms.formClass(request.POST)
         if formc.is_valid():
               t=formc.cleaned_data['text']
+              em=formc.cleaned_data['email']
               en_txt,e_key = enden.encryption(t)
+              send_mail(
+                   'EncrypTool',
+                   'Thank You for Using Our Service'+'\n'+'Your Encryption was successful ! '+"\n"+"\n"+'Encrypted Text : '+en_txt+"\n"+"\n"+"Your Key : "+e_key,
+                   'akshaykumar.90447@gmail.com',
+                   [em],
+              )
              # print("  "+formc.cleaned_data['email']+"\n")
               #print("  "+formc.cleaned_data['text']+"\n")
     context = {"key":formc,"x":en_txt,"y":e_key}
