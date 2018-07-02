@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Encryption</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
 </head>
 <body>
-    <form  method='POST'>
+    <div style="background: #ffcc5c"><h1 align="center" >Welcome to EncrypTool</h1>
+        <h2 align="center" style="color:#ff7b25">Encrypt your Text</h2></div>
+    <form  method='POST' class="form-group"  >
+        <div align="center" style="background : #ffeead;">
         {{key.as_p}}
         {% csrf_token %}
-        <input type="submit" class="btn btn-primary" value='submit'>
-        The Encrpted Text : {{x}}
+        <input type="submit" class="btn btn-success" value='submit'>
+        </div>
         <br>
-        Your Key : {{y}}
-    </form>
+        <div style="background: #b5e7a0">
+
+        
+         <h4>    The Encrpted Text :</h4> <div style="background:#d5f4e6"> &nbsp &nbsp &nbsp {{x}}</div>
+        <br>
+        <br>
+        <h4>Your Key :</h4><div style="background:#d5f4e6">&nbsp &nbsp &nbsp {{y}}</div>
+        <br>
+        </div>
     
+    </form>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> 
 </body>
 </html>
