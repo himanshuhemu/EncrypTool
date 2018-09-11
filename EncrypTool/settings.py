@@ -20,12 +20,11 @@ Base_2 = os.path.join(BASE_DIR,"html")
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@h&+st0(3y5@m)e^5pawq*03x9c$kd#!(y&7xt9ufmt77q0adg'
-
+SECRET_KEY = os.environ.get('SECRET_KEY','SOME+RANDOM+KEY(z9+3vnm(jb0u@&w68t#5_e8s9-lbfhv-')  
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['encryptool.herokuapp.com']
 
 
 # Application definition
@@ -75,12 +74,16 @@ WSGI_APPLICATION = 'EncrypTool.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    #'default': {
+     #   'ENGINE': 'django.db.backends.sqlite3',
+      #  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
 }
 
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -116,7 +119,7 @@ USE_TZ = True
 EMAIL_USE_TLS=True
 EMAIL_HOST ='smtp.gmail.com'
 EMAIL_HOST_USER ='techyswami@gmail.com'
-EMAIL_HOST_PASSWORD='not@safe'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_PORT= 587
 
 # Static files (CSS, JavaScript, Images)
