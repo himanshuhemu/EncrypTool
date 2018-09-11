@@ -115,8 +115,8 @@ USE_L10N = True
 USE_TZ = True
 EMAIL_USE_TLS=True
 EMAIL_HOST ='smtp.gmail.com'
-EMAIL_HOST_USER ='akshaykumar.90447@gmail.com'
-EMAIL_HOST_PASSWORD='786@piplani'
+EMAIL_HOST_USER ='techyswami@gmail.com'
+EMAIL_HOST_PASSWORD='not@safe'
 EMAIL_PORT= 587
 
 # Static files (CSS, JavaScript, Images)
