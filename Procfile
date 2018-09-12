@@ -1,1 +1,1 @@
-web: gunicorn dj-myapp.wsgi
+web:  gunicorn EncrypTool.wsgi  --log-file -

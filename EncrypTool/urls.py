@@ -19,7 +19,7 @@ from myapp import views
 urlpatterns = [
     #path('admin/', admin.site.urls),
     #url(r"^$",views.index,name="kuch"),
-    url(r"^$",views.form_,name="kuch1"),
+    url(r"^$",views.form_,name="kuch"),
     url(r"^dec",views.form_1,name="kuch1"),
     
     

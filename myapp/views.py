@@ -36,8 +36,8 @@ def form_1(request):
     if request.method=="POST":
         forme=form2.formClass(request.POST)
         if forme.is_valid():
-            en=forme.cleaned_data['en_text']
-            enk=forme.cleaned_data['key2']
+            en=forme.cleaned_data['Encrypted_Text']
+            enk=forme.cleaned_data['The_key']
             fin=enden.dec(en,enk)
     context={"abc":forme,"t":fin}
     return render(request,"dec.html",context)
