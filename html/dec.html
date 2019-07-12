@@ -4,31 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Decryption</title>
+    <title >Decryption</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Changa|Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
 </head>
+<style>
+    .boxed{
+        
+        width: 500px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 10px;
+      margin: 0 auto;
+    }
+    .boxednew{   
+        width: 1020px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 5px;
+      margin: 0 auto;
+    }
+    .back
+    {
+        background-color: #171717;
+        height:100vh;
+    }
+
+    </style>
+    
 <body>
-                <div style="background: #ffcc5c"><h1 align="center" >Welcome to EncrypTool</h1>
-                        <h2 align="center" style="color:#ff7b25">Decrypt your Text</h2></div>
+    <div class="back">
+                <h1 align="center" style="font-family: 'Lobster', cursive;color: #6Cf;">Welcome to EncrypTool</h1>
+                <div class="boxed">  
+                <h2 align="center" style="font-family: 'DM Serif Display', serif;">Decrypt your Text</h2>
         <form method='POST' class="form-group" align="center">
-                        <div align="center" style="background : #ffeead;">
+                        <div align="center" style="font-family: 'Righteous', cursive;">
                 {{abc.as_p}}
                 {% csrf_token %}
                 <input type="submit" class="btn btn-success" value='submit'>
-                </div>
+            </div>
+            </div>
                 <br>
-                <div style="background: #b5e7a0">
-                <br>
-                       <h4> Decrypted Text :</h4>  <div style="background:#d5f4e6"> &nbsp &nbsp &nbsp {{t}}</div>
-                <br>
-                <br>
-                </div>
+            
+                <div class="boxednew" align="center">
+                       <h4   style="font-family: 'Righteous', cursive;"> Decrypted Text </h4>  &nbsp &nbsp &nbsp {{t}}
+                    </div>
+                       
+                <br><br><br><br><br>
+    
                 <div>
-                                <h1>
-                                <a href="{% url 'kuch' %}">Click here To Encrypt the text !</a>
+                                <h1 align="center">
+                                <a href="{% url 'kuch' %}" style="font-family:'Berkshire Swash', cursive;">Click here To Encrypt the text !</a><br>
                             </h1>
                             </div>
-        </form>
+                        </form>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> 
+        <div id="bottom" align="center" style="font-family: 'Lobster', cursive;">
+                <h6 style="color:#00A4CCFF;">Made with <i class="fas fa-heart" style="color:red"></i> by Himanshu</h6>
+            </div>
+        
+    </div>
 </body>
 </html>

@@ -6,33 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Encryption</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Changa|Lobster" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&disp   lay=swap" rel="stylesheet">
 </head>
-<body>
-    <div style="background: #ffcc5c"><h1 align="center" >Welcome to EncrypTool</h1>
-        <h2 align="center" style="color:#ff7b25">Encrypt your Text</h2></div>
+<style>
+    .boxed{
+        
+        width: 500px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 10px;
+      margin: 0 auto;
+    }
+    .boxednew{   
+        width: 1020px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 5px;
+      margin: 0 auto;
+    }
+    .back
+    {
+        background-color: #171717;
+        height:100vh;
+    }
+
+    </style>
+    
+<body >
+    <div class="back">
+        <h1 align="center" style="font-family: 'Lobster', cursive; color: #6Cf;" >Welcome to EncrypTool</h1>
+        
+            <div class="boxed">
+       
+            <h2 align="center"style="font-family: 'DM Serif Display', serif; ">Encrypt your Text</h2>
     <form  method='POST' class="form-group"  >
-        <div align="center" style="background : #ffeead;">
+        
+        <div align="center" style=" font-family: 'Righteous', cursive;">
         {{key.as_p}}
         {% csrf_token %}
         <input type="submit" class="btn btn-success" value='submit'>
         </div>
+    </div>
         <br>
-        <div style="background: #b5e7a0">
+        <div align="center">
 
         
-         <h4>    The Encrpted Text :</h4> <div style="background:#d5f4e6"> &nbsp &nbsp &nbsp {{x}}</div>
+        <div class="boxednew"> <h4 style="font-family: 'Righteous', cursive;">    The Encrpted Text </h4> &nbsp &nbsp &nbsp {{x}}
+        </div>
         <br>
-        <br>
-        <h4>Your Key :</h4><div style="background:#d5f4e6">&nbsp &nbsp &nbsp {{y}}</div>
+        <div class="boxednew">
+        <h4 style="font-family: 'Righteous', cursive;">Your Key </h4>&nbsp &nbsp &nbsp {{y}}
+    </div>
         <br>
         </div>
-        <div>
+        <div align="center">
             <h1>
-            <a href="{% url 'kuch1' %}">Click here To Decrypt the text !</a>
+            <a href="{% url 'kuch1' %}" style="font-family: 'Berkshire Swash', cursive;"  >Click here To Decrypt the text !</a><br>
         </h1>
         </div>
     
     </form>
+    
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script> 
+
+<div align="center" style="font-family: 'Lobster', cursive;">
+    <h6 style="color:#00A4CCFF;">Made with <i class="fas fa-heart" style="color:red"></i> by Himanshu</h6>
+</div>
+
+</div>
 </body>
 </html>

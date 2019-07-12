@@ -25,7 +25,7 @@ DEBUG = False
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = False
 
-ALLOWED_HOSTS = ['encryptool.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
+        #'whitenoise.middleware.WhiteNoiseMiddleware',
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -86,9 +86,7 @@ DATABASES = {
  #       default=config('DATABASE_URL')
 #}
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
-DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+
 #DATABASES['default'].update(db_from_env)
 #DATABASES['default']['CONN_MAX_AGE'] = 500
 
@@ -123,10 +121,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-EMAIL_USE_TLS=True
-EMAIL_HOST ='smtp.gmail.com'
-EMAIL_HOST_USER ='techyswami@gmail.com'
-EMAIL_HOST_PASSWORD=os.environ.get('HOST_PASSWORD')
+EMAIL_HOST ='smtp.porkbun.com'
+EMAIL_HOST_USER ='encryptool@himanshu26.co'
+#EMAIL_HOST_PASSWORD=os.environ.get('HOST_PASSWORD')
+EMAIL_HOST_PASSWORD = 'idontknow'
+EMAIL_USE_TLS = True
 EMAIL_PORT= 587
 
 # Static files (CSS, JavaScript, Images)

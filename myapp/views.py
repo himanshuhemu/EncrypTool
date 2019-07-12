@@ -23,7 +23,7 @@ def form_(request):
               send_mail(
                    'EncrypTool',
                    'Thank You for Using Our Service'+'\n'+'Your Encryption was successful ! '+"\n"+"\n"+'Encrypted Text : '+en_txt+"\n"+"\n"+"Your Key : "+e_key,
-                   'akshaykumar.90447@gmail.com',
+                   'encryptool@himanshu26.co',
                    [em],
               )
              # print("  "+formc.cleaned_data['email']+"\n")
