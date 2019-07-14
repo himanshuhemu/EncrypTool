@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title >Decryption</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
@@ -21,9 +21,10 @@
         width: 500px;
         background-color:#FFFFFF;
       border: 5px  solid #00A4CCFF ;
-    padding: 10px;
+    padding: 2px;
       margin: 0 auto;
     }
+
     .boxednew{   
         width: 1020px;
         background-color:#FFFFFF;
@@ -35,15 +36,41 @@
     {
         background-color: #171717;
         height:100vh;
+        
+        
     }
+    @media screen and (max-width: 480px) 
+    {
+      .boxed{
+        
+        width: 250px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 10px;
+      margin: 0 auto;
+    }
+    .back
+    {
+        background-color: #171717;
+        height:100vh;
+    }
+    .boxednew{   
+        width: 280px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 2px;
+      margin: 0 auto;
+    }
+    
 
+    }
     </style>
     
 <body>
     <div class="back">
                 <h1 align="center" style="font-family: 'Lobster', cursive;color: #6Cf;">Welcome to EncrypTool</h1>
                 <div class="boxed">  
-                <h2 align="center" style="font-family: 'DM Serif Display', serif;">Decrypt your Text</h2>
+                <h2 align="center" style="font-family: 'DM Serif Display', serif;">Decrypt</h2>
         <form method='POST' class="form-group" align="center">
                         <div align="center" style="font-family: 'Righteous', cursive;">
                 {{abc.as_p}}
@@ -54,10 +81,10 @@
                 <br>
             
                 <div class="boxednew" align="center">
-                       <h4   style="font-family: 'Righteous', cursive;"> Decrypted Text </h4>  &nbsp &nbsp &nbsp {{t}}
+                       <h6   style="font-family: 'Righteous', cursive;"> Decrypted Text </h6>  &nbsp &nbsp &nbsp {{t}}
                     </div>
                        
-                <br><br><br><br><br>
+                <br>
     
                 <div>
                                 <h1 align="center">

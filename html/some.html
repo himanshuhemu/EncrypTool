@@ -38,6 +38,53 @@
         height:100vh;
     }
 
+    .boxednew1{      
+        width: 1020px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 2px;
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: 480px) 
+    {
+      .word-wrap{word-wrap: break-word;
+        font-size:11px;}
+
+      .boxed{
+        
+        width: 250px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 2px;
+      margin: 0 auto;
+    }
+    .back
+    {
+        background-color: #171717;
+        height:100vh;
+    }
+    .boxednew{      
+        width: 300px;
+        height: 90px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 2px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    
+    .boxednew1{      
+        width: 300px;
+        height: 70px;
+        background-color:#FFFFFF;
+      border: 5px  solid #00A4CCFF ;
+    padding: 2px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    }
     </style>
     
 <body >
@@ -46,7 +93,7 @@
         
             <div class="boxed">
        
-            <h2 align="center"style="font-family: 'DM Serif Display', serif; ">Encrypt your Text</h2>
+            <h2 align="center"style="font-family: 'DM Serif Display', serif; ">Encrypt</h2>
     <form  method='POST' class="form-group"  >
         
         <div align="center" style=" font-family: 'Righteous', cursive;">
@@ -59,13 +106,13 @@
         <div align="center">
 
         
-        <div class="boxednew"> <h4 style="font-family: 'Righteous', cursive;">    The Encrpted Text </h4> &nbsp &nbsp &nbsp {{x}}
+        <div class="boxednew"> <h6 style="font-family: 'Righteous', cursive;">    The Encrpted Text </h6><p class="word-wrap"> {{x}}</p>
         </div>
         <br>
-        <div class="boxednew">
-        <h4 style="font-family: 'Righteous', cursive;">Your Key </h4>&nbsp &nbsp &nbsp {{y}}
+        <div class="boxednew1">
+        <h6 style="font-family: 'Righteous', cursive;">Your Key </h6><p class="word-wrap">{{y}}</p>
     </div>
-        <br>
+        
         </div>
         <div align="center">
             <h1>
