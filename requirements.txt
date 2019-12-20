@@ -17,7 +17,7 @@ requests==2.19.1
 sip==4.19.8
 six==1.11.0
 urllib3==1.23
-waitress==1.1.0
+waitress==1.4.0
 whitenoise==4.0
 wincertstore==0.2
 gunicorn==19.0.0
